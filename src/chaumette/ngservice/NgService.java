@@ -13,7 +13,7 @@ public class NgService {
 
 	private ArrayList<NGReplacement> replacementsTomorrow = new ArrayList<>();
 	private ArrayList<Information> newsToday = new ArrayList<>();
-	private ArrayList<NGReplacement> replacementsFlorine = new ArrayList<>();
+	private ArrayList<NGReplacement> replacementsF = new ArrayList<>();
 
 	public void start (String[] args) {
 		refreshReplacements();
@@ -30,7 +30,7 @@ public class NgService {
 		//System.out.println("Morgen:");
 		//printVertretungen(replacementsTomorrow);
 		writeVertretungenToFile(replacementsTomorrow, "entries/Morgen.txt");
-		replacementsFlorine = getVertretungenFromKlasse(NgConstants.klasseFlorine, replacementsTomorrow);
+		replacementsF = getVertretungenFromKlasse(NgConstants.klasseF, replacementsTomorrow);
 	}
 
 
